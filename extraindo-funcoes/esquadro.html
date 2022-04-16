@@ -14,22 +14,23 @@
         // triangulo interno
         pincel.fillStyle = corInterna;
         pincel.beginPath();
-        /*console.log(
-            "XA: " , xA * 2,
-            "YA: " , (yA * 2) + yA + (yA / 2),
-            "\nXB: " , xA * 2,
-            "YB: " , yC - yA,
-            "\nXC: " , (yC / 2) + xA + (xA /2),
-            "YC: " , yC - yA
-        );*/
-        pincel.moveTo(xA * 2, (yA * 2) + yA + (yA / 2));
-        pincel.lineTo(yA * 2, yC - yA);
-        pincel.lineTo((yC / 2) + xA + (xA /2), yC - yA);
+        console.log(
+            "XA: " , (6*xA + xC)/7,
+            "YA: " , (9*yA + 5*yC)/14,
+            "\nXB: " , (6*xA + xC)/7,
+            "YB: " , (yA + 6*yC)/7,
+            "\nXC: " , (5*xA + 9*xC)/14,
+            "YC: " , (yA + 6*yC)/7
+        );
+        pincel.moveTo((6*xA + xC)/7, (9*yA + 5*yC)/14);
+        pincel.lineTo((6*xA + xC)/7, (yA + 6*yC)/7);
+        pincel.lineTo((5*xA + 9*xC)/14, (yA + 6*yC)/7);
         pincel.fill();
     }
-
+    //              xA  yA  xC   yC
     desenhaEsquadro(50, 50, 400, 400, 'black', 'white');
     desenhaEsquadro(5, 5, 40, 40, 'red', 'orange');
-    // desenhaEsquadro(50, 5, 85, 40, 'green', 'yellow');
+    desenhaEsquadro(50, 5, 85, 40, 'green', 'yellow');
+    desenhaEsquadro(95, 5, 130, 40, 'blue', 'grey');
 
 </script>
