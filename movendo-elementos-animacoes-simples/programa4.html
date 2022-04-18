@@ -17,10 +17,20 @@
 	}
 
 	var x = 20;
+	var ida = true;
 	function atualizarTela() {
+		if(x > 580) {
+			ida = false;
+		} else if(x < 20) {
+			ida = true;
+		}
 		limparTela();
 		desenharCirculo(x, 20, 10);
-		x++;
+		if(ida) {
+			x++;
+		} else {
+			x--;
+		}
 	}
 
 	setInterval(atualizarTela, 10);
