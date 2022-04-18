@@ -16,22 +16,34 @@
 		pincel.clearRect(0, 0, 600, 400);
 	}
 
-	var x = 20;
-	var ida = true;
 	function atualizarTela() {
 		if(x > 580) {
-			ida = false;
+			mover = false;
 		} else if(x < 20) {
-			ida = true;
+			mover = true;
+		}
+		if(raio > 30) {
+			crescer = false;
+		} else if(raio < 20) {
+			crescer = true;
 		}
 		limparTela();
-		desenharCirculo(x, 20, 10);
-		if(ida) {
+		desenharCirculo(x, 20, raio);
+		if(mover) {
 			x++;
 		} else {
 			x--;
 		}
+		if(crescer) {
+			raio++;
+		} else {
+			raio--;
+		}
 	}
 
-	setInterval(atualizarTela, 10);
+	var x = 20;
+	var mover = true;
+	var raio = 20;
+	var crescer = true;
+	setInterval(atualizarTela, 20);
 </script>
