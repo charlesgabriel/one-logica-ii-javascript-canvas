@@ -13,10 +13,10 @@
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
         if(evento.shiftKey && raio + 10 <= 40) {
-            raio = raio + 10; 
+            raio += 10; 
         }
         if(evento.ctrlKey && raio - 5 >= 10) {
-            raio = raio - 5;
+            raio -= 5;
         }
         pincel.fillStyle = cores[posicaoCor];
         pincel.beginPath();
